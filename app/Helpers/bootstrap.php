@@ -11,4 +11,5 @@ $app = (new Helpers\System())
     ->loadConfigFiles()
     ->CreateDb()
     ->registerApp()
+    ->registerError()
     ->app;

@@ -69,4 +69,14 @@ class System
         foreach (config('app.providers') as $item) with(new $item($this->app))->register();
         return $this;
     }
+
+    public function registerError()
+    {
+        if (config('app.debug')) {
+            $whoops = new \Whoops\Run;
+            $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+            $whoops->register();
+        }
+        return $this;
+    }
 }
