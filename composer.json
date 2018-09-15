@@ -1,0 +1,32 @@
+{
+  "name": "administrator/blog",
+  "authors": [
+    {
+      "name": "chen",
+      "email": "569922982@qq.com"
+    }
+  ],
+  "require": {
+    "illuminate/database": "5.7.x-dev",
+    "illuminate/routing": "5.7.x-dev",
+    "illuminate/validation": "5.7.x-dev",
+    "illuminate/events": "5.7.x-dev",
+    "illuminate/pagination": "5.7.x-dev",
+    "illuminate/view": "5.7.x-dev",
+    "illuminate/cache": "5.7.x-dev",
+    "illuminate/redis": "5.7.x-dev",
+    "vlucas/phpdotenv": "2.4.x-dev",
+    "illuminate/config": "5.7.x-dev"
+  },
+  "autoload": {
+    "classmap": [
+      "app/Services",
+      "app/Controllers",
+      "app/Models"
+    ],
+    "files": [
+      "app/Helpers/System.php",
+      "app/Helpers/helpers.php"
+    ]
+  }
+}
