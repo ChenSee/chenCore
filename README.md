@@ -17,3 +17,6 @@
         "illuminate/redis": "5.7.x-dev",
         "vlucas/phpdotenv": "2.4.x-dev",
         "illuminate/config": "5.7.x-dev"
+
+### 安装运行
+    composer install
