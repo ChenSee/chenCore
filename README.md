@@ -7,16 +7,16 @@
 - 我的博客[CHEN](http://9in.info)
 
 ### 相关集成
-        "illuminate/database": "5.7.x-dev",
-        "illuminate/routing": "5.7.x-dev",
-        "illuminate/validation": "5.7.x-dev",
-        "illuminate/events": "5.7.x-dev",
-        "illuminate/pagination": "5.7.x-dev",
-        "illuminate/view": "5.7.x-dev",
-        "illuminate/cache": "5.7.x-dev",
-        "illuminate/redis": "5.7.x-dev",
-        "vlucas/phpdotenv": "2.4.x-dev",
-        "illuminate/config": "5.7.x-dev"
+    "illuminate/database": "5.7.x-dev",
+    "illuminate/routing": "5.7.x-dev",
+    "illuminate/validation": "5.7.x-dev",
+    "illuminate/events": "5.7.x-dev",
+    "illuminate/pagination": "5.7.x-dev",
+    "illuminate/view": "5.7.x-dev",
+    "illuminate/cache": "5.7.x-dev",
+    "illuminate/redis": "5.7.x-dev",
+    "vlucas/phpdotenv": "2.4.x-dev",
+    "illuminate/config": "5.7.x-dev"
 
 ### 安装运行
     composer install
