@@ -127,6 +127,7 @@ return [
          * Laravel Framework Service Providers...
          */
         Illuminate\Events\EventServiceProvider::class,
+        Illuminate\Routing\RoutingServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
@@ -135,8 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Redis\RedisServiceProvider::class,
-        Illuminate\Routing\RoutingServiceProvider::class
+        Illuminate\Redis\RedisServiceProvider::class
     ]
 
 ];

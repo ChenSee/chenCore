@@ -9,11 +9,13 @@
 
 namespace Helpers;
 
+use Exceptions\HandleExceptions;
 use \Illuminate;
 
 class System
 {
     public $app;
+    public $whoops;
 
     public function __construct()
     {
@@ -32,6 +34,8 @@ class System
         $this->app->instance('path.lang', app('path.resource') . '/lang');
         $this->app->singleton('config', new Illuminate\Config\Repository());
         $this->app->instance('request', Illuminate\Http\Request::capture());
+
+
         return $this;
     }
 
@@ -72,11 +76,14 @@ class System
 
     public function registerError()
     {
+        $whoops = new \Whoops\Run;
         if (config('app.debug')) {
-            $whoops = new \Whoops\Run;
-            $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-            $whoops->register();
+            $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+        } else {
+            $whoops->pushHandler(new HandleExceptions());
         }
+        $whoops->register();
+        $this->whoops = $whoops;
         return $this;
     }
 }

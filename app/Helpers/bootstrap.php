@@ -6,10 +6,11 @@
  * Time: 15:07
  */
 date_default_timezone_set('Asia/Shanghai');
-$app = (new Helpers\System())
+$run = (new Helpers\System())
     ->loadPath()
     ->loadConfigFiles()
     ->CreateDb()
     ->registerApp()
-    ->registerError()
-    ->app;
+    ->registerError();
+$app = $run->app;
+$whoops = $run->whoops;

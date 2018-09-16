@@ -8,8 +8,7 @@
 $router = app('router');
 $router->get('/', 'Controllers\IndexController@index');
 
-
-
+// 路由处理
 $request = Illuminate\Http\Request::createFromGlobals();
 $response = $router->dispatch($request);
 $response->send();

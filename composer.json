@@ -23,6 +23,7 @@
     "classmap": [
       "app/Services",
       "app/Controllers",
+      "app/Exceptions",
       "app/Models"
     ],
     "files": [

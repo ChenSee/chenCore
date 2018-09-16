@@ -203,6 +203,20 @@ if (!function_exists('request')) {
     }
 }
 
+if (!function_exists('response')) {
+    /**
+     * @param  string $content
+     * @param  int $status
+     * @param  array $headers
+     * @return Illuminate\Http\Response
+     */
+    function response($content = null, $status = 200, $headers = [])
+    {
+        if (is_null($content)) return (new Illuminate\Http\Response());
+        return (new Illuminate\Http\Response($content, $status, $headers))->send();
+    }
+}
+
 if (!function_exists('dd')) {
     function dd($value = null)
     {
