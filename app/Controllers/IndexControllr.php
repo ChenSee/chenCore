@@ -8,13 +8,10 @@
 
 namespace Controllers;
 
-use Models\Model;
-
 class IndexController extends \Illuminate\Routing\Controller
 {
     public function index()
     {
-        Model::all();
         return view('index', ['data' => 'World']);
     }
 }
